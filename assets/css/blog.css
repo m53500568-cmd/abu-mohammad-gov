@@ -1,0 +1,46 @@
+/* ===== تنسيقات خاصة بصفحات المدونة والخدمات التفصيلية ===== */
+
+details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  color: #2D5016;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] > summary::after {
+  content: '−';
+}
+
+details {
+  transition: background-color 0.15s ease;
+}
+
+details[open] {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* بطاقات شبكة المدونة */
+.blog-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* breadcrumb separators already inline via Tailwind utility classes */
+
